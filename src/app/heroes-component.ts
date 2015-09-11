@@ -21,6 +21,12 @@ export class HeroesComponent {
     if (this._heroes) { return this._heroes; }
 
     this._heroService.getAllHeroes().then(heroes => this._heroes = heroes);
+
+    // // Observable
+    // this._heroService.getAllHeroes()
+    //     .toRx().map(res => res.json())
+    //     .subscribe(res => this._heroes = res);
+
     return this._heroes;
   }
 
