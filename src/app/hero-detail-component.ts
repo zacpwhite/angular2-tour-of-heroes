@@ -10,7 +10,7 @@ import {HERO_DIRECTIVES} from './hero-directives';
   directives: [HERO_DIRECTIVES]
 })
 export class HeroDetailComponent {
-  hero: Hero = <Hero>{};
+  hero: Hero = <Hero>{}; // or use Elvis operator ? in the template
 
   constructor(private _heroService: HeroService, private _routeParams: RouteParams) {
     let id = +_routeParams.get('id');
