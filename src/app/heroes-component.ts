@@ -5,6 +5,7 @@ import {Hero} from './hero';
 import {Routes} from './route-config';
 import {HERO_DIRECTIVES} from './hero-directives';
 import {InitCapsPipe} from './init-caps-pipe'
+import {SortHeroesPipe} from './sort-heroes-pipe'
 import {FilterTextComponent} from './filter-text-component';
 import {FilterService} from './filter-service';
 
@@ -13,7 +14,7 @@ import {FilterService} from './filter-service';
   templateUrl: 'app/heroes-component.html',
   directives: [HERO_DIRECTIVES, FilterTextComponent],
   styleUrls: ['app/heroes-component.css'],
-  pipes: [InitCapsPipe]
+  pipes: [InitCapsPipe, SortHeroesPipe]
 })
 export class HeroesComponent {
   public filteredHeroes: Hero[];
